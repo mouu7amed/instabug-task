@@ -2,5 +2,5 @@
 
 ### Demo
 
-[In the project directory, you can run:](https://instabug-task-mouu7amed.netlify.app/login)
+https://instabug-task-mouu7amed.netlify.app/login
 
