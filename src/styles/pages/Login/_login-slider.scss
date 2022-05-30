@@ -1,0 +1,35 @@
+.slider {
+  background-color: $primary-dark;
+  min-height: 100vh;
+  @extend %flex-center;
+  flex-direction: column;
+  flex-basis: 50%;
+  transition: $duration;
+
+  @include breakpoint(sm) {
+    display: none;
+  }
+
+  img {
+    max-width: 70%;
+  }
+
+  .slide-label {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 2rem 0 1rem;
+  }
+
+  .slider-nav {
+    button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: white;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      transition: $duration;
+    }
+  }
+}

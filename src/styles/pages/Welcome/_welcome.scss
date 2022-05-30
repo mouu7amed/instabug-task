@@ -1,0 +1,50 @@
+.welcome {
+  @extend %flex-center;
+  min-height: 100vh;
+
+  .info {
+    @extend %flex-center;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    @include breakpoint(sm) {
+      padding: 1rem;
+    }
+
+    .welcome-text {
+      color: $text-primary;
+      font-weight: 500;
+      font-size: 20px;
+
+      @include breakpoint(sm) {
+        font-weight: 400;
+        font-size: 18px;
+      }
+
+      span {
+        color: $primary-light;
+      }
+    }
+
+    button {
+      border: none;
+      outline: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      background-color: $primary-light;
+      color: white;
+      border-radius: 5px;
+      transition: $duration;
+
+      &:hover {
+        background-color: $primary-dark;
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}

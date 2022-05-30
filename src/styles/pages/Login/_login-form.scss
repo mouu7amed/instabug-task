@@ -1,0 +1,203 @@
+.login-form {
+  @extend %flex-center;
+  flex-direction: column;
+  flex-basis: 50%;
+  min-height: 100vh;
+  padding: 2rem;
+
+  @include breakpoint(sm) {
+    flex-basis: 100%;
+  }
+
+  .header {
+    @extend %flex-center;
+    flex-direction: column;
+    p {
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    min-width: 350px;
+    max-width: 400px;
+    margin-top: 1rem;
+
+    .social-login {
+      @extend %flex-center;
+      flex-direction: column;
+      width: 100%;
+
+      button {
+        position: relative;
+        @extend %flex-center;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: $duration;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+        &:not(:last-of-type) {
+          margin-bottom: 0.5rem;
+        }
+
+        &.google {
+          background-color: $primary-light;
+          color: white;
+        }
+
+        &.github {
+          background-color: $dark;
+          color: white;
+        }
+
+        &.microsoft {
+          background-color: white;
+        }
+
+        .icon {
+          position: absolute;
+          left: 15px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .divider {
+      border-top: 1px solid $text-secondary;
+      width: 100%;
+      margin: 1.5rem 0 1rem;
+      position: relative;
+      span {
+        position: absolute;
+        top: -12.5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 0 0.5rem;
+        color: $text-primary;
+      }
+    }
+
+    .error-alert {
+      padding: 1rem;
+      background-color: #ffcdd2;
+      text-align: center;
+      border-radius: 5px;
+      margin: 1rem 0;
+      width: 100%;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      color: $text-primary;
+    }
+
+    .input-field {
+      width: 100%;
+      outline: none;
+      padding: 0.5rem 1rem;
+      border: none;
+      border: 1px solid $text-secondary;
+      border-radius: 5px;
+      &:first-of-type {
+        margin-bottom: 1rem;
+      }
+    }
+    .input-field-error {
+      width: 100%;
+      outline: none;
+      padding: 0.5rem 1rem;
+      border: none;
+      border: 1px solid $error;
+      border-radius: 5px;
+    }
+
+    .error {
+      color: $error;
+      font-size: 14px;
+      margin-bottom: 0.3rem;
+      max-width: 350px;
+    }
+
+    .password-label {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        color: $text-secondary;
+        font-size: 13px;
+        font-weight: 300;
+        cursor: pointer;
+      }
+    }
+
+    .loginBtn {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 1rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: $duration;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+      &:hover:enabled {
+        background-color: $primary-light;
+        color: white;
+      }
+    }
+
+    .signup {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      width: 100%;
+      margin-top: 0.3rem;
+
+      p {
+        &:first-of-type {
+          color: $text-primary;
+          span {
+            color: $primary-light;
+            cursor: pointer;
+          }
+        }
+        &:last-of-type {
+          color: $primary-light;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .trusted {
+      color: $text-secondary;
+      width: 100%;
+      @extend %flex-center;
+      margin: 0.5rem 0;
+    }
+
+    .logos {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 0.5rem;
+
+      .logo {
+        color: $text-secondary;
+        font-size: 25px;
+      }
+    }
+  }
+}

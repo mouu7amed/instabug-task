@@ -1,0 +1,16 @@
+.no-match {
+  @extend %flex-center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  div {
+    @extend %flex-center;
+    flex-direction: column;
+    margin-top: 3rem;
+    color: $primary-dark;
+
+    h3 {
+      font-size: 22px;
+    }
+  }
+}

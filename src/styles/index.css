@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+.login, .login-form, .login-form .header, .login-form form .social-login, .login-form form .social-login button, .login-form form .trusted, .slider, .welcome, .welcome .info, .no-match, .no-match div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.login, .login-form, .login-form .header, .login-form form .social-login, .login-form form .social-login button, .login-form form .trusted, .slider, .welcome, .welcome .info, .no-match, .no-match div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.login-form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+@media (max-width: 767px) {
+  .login-form {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.login-form .header {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login-form .header p {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.login-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 350px;
+  max-width: 400px;
+  margin-top: 1rem;
+}
+
+.login-form form .social-login {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.login-form form .social-login button {
+  position: relative;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.login-form form .social-login button:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+.login-form form .social-login button.google {
+  background-color: #2196f3;
+  color: white;
+}
+
+.login-form form .social-login button.github {
+  background-color: #212121;
+  color: white;
+}
+
+.login-form form .social-login button.microsoft {
+  background-color: white;
+}
+
+.login-form form .social-login button .icon {
+  position: absolute;
+  left: 15px;
+  font-size: 18px;
+}
+
+.login-form form .divider {
+  border-top: 1px solid #bdbdbd;
+  width: 100%;
+  margin: 1.5rem 0 1rem;
+  position: relative;
+}
+
+.login-form form .divider span {
+  position: absolute;
+  top: -12.5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: white;
+  padding: 0 0.5rem;
+  color: #757575;
+}
+
+.login-form form .error-alert {
+  padding: 1rem;
+  background-color: #ffcdd2;
+  text-align: center;
+  border-radius: 5px;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.login-form form label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #757575;
+}
+
+.login-form form .input-field {
+  width: 100%;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+.login-form form .input-field:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.login-form form .input-field-error {
+  width: 100%;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  border: 1px solid #f44336;
+  border-radius: 5px;
+}
+
+.login-form form .error {
+  color: #f44336;
+  font-size: 14px;
+  margin-bottom: 0.3rem;
+  max-width: 350px;
+}
+
+.login-form form .password-label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-form form .password-label span {
+  color: #bdbdbd;
+  font-size: 13px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.login-form form .loginBtn {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.login-form form .loginBtn:hover:enabled {
+  background-color: #2196f3;
+  color: white;
+}
+
+.login-form form .signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.login-form form .signup p:first-of-type {
+  color: #757575;
+}
+
+.login-form form .signup p:first-of-type span {
+  color: #2196f3;
+  cursor: pointer;
+}
+
+.login-form form .signup p:last-of-type {
+  color: #2196f3;
+  cursor: pointer;
+}
+
+.login-form form .trusted {
+  color: #bdbdbd;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.login-form form .logos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.5rem;
+}
+
+.login-form form .logos .logo {
+  color: #bdbdbd;
+  font-size: 25px;
+}
+
+.slider {
+  background-color: #002276;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+@media (max-width: 767px) {
+  .slider {
+    display: none;
+  }
+}
+
+.slider img {
+  max-width: 70%;
+}
+
+.slider .slide-label {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.slider .slider-nav button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.welcome {
+  min-height: 100vh;
+}
+
+.welcome .info {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+@media (max-width: 767px) {
+  .welcome .info {
+    padding: 1rem;
+  }
+}
+
+.welcome .info .welcome-text {
+  color: #757575;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .welcome .info .welcome-text {
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
+
+.welcome .info .welcome-text span {
+  color: #2196f3;
+}
+
+.welcome .info button {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 5px;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.welcome .info button:hover {
+  background-color: #002276;
+}
+
+.welcome .info button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.no-match {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.no-match div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3rem;
+  color: #002276;
+}
+
+.no-match div h3 {
+  font-size: 22px;
+}
+/*# sourceMappingURL=index.css.map */
