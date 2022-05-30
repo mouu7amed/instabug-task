@@ -16,13 +16,12 @@ import { motion } from "framer-motion";
 
 const loginFormVariants = {
   hidden: {
-    x: "100vw",
+    opacity: 0,
   },
   visible: {
-    x: 0,
+    opacity: 1,
     transition: {
-      duration: 1,
-      type: "spring",
+      duration: 2,
     },
   },
 };

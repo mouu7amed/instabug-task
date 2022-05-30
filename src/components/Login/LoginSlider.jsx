@@ -6,14 +6,15 @@ import ImageTwo from "../../assets/slider-2.png";
 import ImageThree from "../../assets/slider-3.png";
 import { motion } from "framer-motion";
 
-const sliderImageVariants = {
+const sliderVariants = {
   hidden: {
-    opacity: 0,
+    x: "-100vw",
   },
   visible: {
-    opacity: 1,
+    x: 0,
     transition: {
       duration: 1,
+      type: "spring",
     },
   },
 };
@@ -46,14 +47,13 @@ export const LoginSlider = () => {
   });
 
   return (
-    <div className="slider">
-      <motion.img
-        src={slides[index].imgPath}
-        alt="Slide"
-        variants={sliderImageVariants}
-        initial="hidden"
-        animate="visible"
-      />
+    <motion.div
+      className="slider"
+      variants={sliderVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <img src={slides[index].imgPath} alt="Slide" />
       <p className="slide-label">{slides[index].label}</p>
       <div className="slider-nav">
         <button onClick={() => setIndex(0)}>
@@ -78,6 +78,6 @@ export const LoginSlider = () => {
           )}
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
