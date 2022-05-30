@@ -1,12 +1,13 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState("");
   const [loginError, setLoginError] = useState("");
 
+  const currentUser =
+    !!localStorage.getItem("user") && localStorage.getItem("user");
   const navigate = useNavigate();
 
   const users = [
@@ -20,14 +21,6 @@ export const AuthProvider = ({ children }) => {
     { email: "mohamed7@instabug.com", password: "A12345678" },
   ];
 
-  useEffect(() => {
-    const getUser = () => {
-      const item = localStorage.getItem("user");
-      setCurrentUser(item);
-    };
-    return getUser;
-  }, []);
-
   const login = (email, password) => {
     const usercheck = users.find(
       (user) => user.email === email && user.password === password
@@ -35,9 +28,6 @@ export const AuthProvider = ({ children }) => {
 
     if (usercheck) {
       localStorage.setItem("user", email);
-      if (!currentUser) {
-        window.location.reload();
-      }
       navigate("/welcome", { replace: true });
     } else {
       setLoginError("Your email and/or password are incorrect");
@@ -47,9 +37,6 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem("user");
     navigate("/login", { replace: true });
-    if (currentUser) {
-      window.location.reload();
-    }
   };
 
   return (

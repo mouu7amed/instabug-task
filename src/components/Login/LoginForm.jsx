@@ -85,6 +85,7 @@ export const LoginForm = () => {
 
     // login
     try {
+      setError({ email: "", password: "" });
       login(user.email, user.password);
     } catch {
       console.log("Error logging in");
